@@ -32,10 +32,10 @@
                     <td class="tabtxt">{{ req.text }}</td>
                     <td class="tabtime">{{ req.spent_time }}</td>
                     <td>
-                        <a href="{% url 'accept' req.id %}">Accept</a>
+                        <a href="{% url 'accept' req.id %}" class="a_button">Accept</a>
                     </td>
                     <td>
-                        <a href="{% url 'reject' req.id %}">Reject</a>
+                        <a href="{% url 'reject' req.id %}" class="a_button">Reject</a>
                     </td>
                 </tr>
                 {% endfor %}

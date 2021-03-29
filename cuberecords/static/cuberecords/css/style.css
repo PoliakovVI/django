@@ -454,4 +454,13 @@ body{
 .space_block {
     height:150px;
 }
-
+.a_button {
+    text-decoration: none;
+    border: 1px solid #a58b8b;
+    border-radius: 3px;
+    background-color: #f0f0e0;
+    padding:2px;
+    position:relative;
+    left:30px;
+    color:black;
+}

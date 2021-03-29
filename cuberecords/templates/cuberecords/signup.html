@@ -1,8 +1,10 @@
 {% extends 'cuberecords/base.html' %}
 {% block content %}
+<div class="form">
     <form method="POST">
         {% csrf_token %}
         <table>{{ form }}</table>
         <input type="submit" value="Sign Up"/>
     </form>
+</div>
 {% endblock %}

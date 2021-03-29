@@ -1,5 +1,6 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import login, logout, authenticate
+from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.models import User
 
@@ -76,7 +77,7 @@ def sign_up(request):
                     'notes': notes,
                 }
                 return render(request, 'cuberecords/records.html', context)
-    else: # GET
+    else:  # GET
         form = RegistrationForm()
     return render(request, 'cuberecords/signup.html', {'form': form})
 
@@ -94,14 +95,15 @@ def record_and_comments(request, note_id):
             author = request.user
             comment = form.cleaned_data['comment']
             Comment(note=note, text=comment, author=author).save()
-
-    form = CommentForm()
-    context = {
-        'note': note,
-        'comments': note.comment_set.order_by('-created_at'),
-        'form': form,
-    }
-    return render(request, 'cuberecords/record_and_comments.html', context)
+            return HttpResponseRedirect(reverse('record', kwargs={'note_id': note_id}))
+    else:
+        form = CommentForm()
+        context = {
+            'note': note,
+            'comments': note.comment_set.order_by('-created_at'),
+            'form': form,
+        }
+        return render(request, 'cuberecords/record_and_comments.html', context)
 
 
 def account(request):
@@ -133,7 +135,7 @@ def accept(request, req_id):
         'form': form,
         'requests': requests,
     }
-    return render(request, 'cuberecords/account.html', context)
+    return redirect('account')  # render(request, 'cuberecords/account.html', context)
 
 
 def reject(request, req_id):
@@ -146,7 +148,7 @@ def reject(request, req_id):
         'form': form,
         'requests': requests,
     }
-    return render(request, 'cuberecords/account.html', context)
+    return redirect('account')  # render(request, 'cuberecords/account.html', context)
 
 
 def record_request(request):

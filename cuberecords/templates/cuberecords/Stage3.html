@@ -1,0 +1,94 @@
+{% extends 'cuberecords/base.html' %}
+{% block content %}
+{% load static %}
+            <div class="sectionName">
+                <div class="name">Этап №3</div>
+                <div class="idea">Легкость дается тяжелым трудом.</div>
+                <div class="author">И.К.Айвазовский</div>
+            </div>
+            <div class="content">
+               <a name="sec1"></a>
+                <div class="infimg">
+                    <div class="inf">Шаг 4: собираем "неправильный" белый крест на последнем слое.</div>
+                    <img src="{% static 'cuberecords/img/3sitg.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">F R U R' U' F' - 1, 2 или 3 раза.</div>
+                    <img src="{% static 'cuberecords/img/3s1.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Если обратить внимание на крест вверху кубика, то белые наклейки в этом кресте образуют одну из 4-х ситуаций.</div>
+                    <img src="{% static 'cuberecords/img/3s2.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf"> Наша цель - собрать "белый крест". Переход от предыдущей ситуации к следующей делается ОДИНАКОВОЙ формулой. F R U R' U' F'. </div>
+                    <img src="{% static 'cuberecords/img/3s3.jpg' %}" alt="">
+                </div>
+                <a name="sec2"></a>
+                <div class="infimg">
+                    <div class="inf">Шаг 5: делаем "правильный" белый крест.</div>
+                    <img src="{% static 'cuberecords/img/3qitg.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Вращаем верхний слой, чтобы какие-либо ДВА ребра совпали по цветам с центрами из среднего слоя. Может получиться одна из двух ситуаций.</div>
+                    <img src="{% static 'cuberecords/img/3q1.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">На свои места становятся два противолежащих ребра (у нас бело-синее и бело-зеленое), два остальных нужно поменять местами. 
+R U R' U R U2 R'</div>
+                    <img src="{% static 'cuberecords/img/3q2.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Два собраных ребра, стоят под углом* (у нас бело-синее и бело-оранжевое), два остальных нужно поменять местами комбинацией, при этом кубик держим, чтобы угол* смотрел от вас и вправо. 
+R U R' U R U2 R' U</div>
+                    <img src="{% static 'cuberecords/img/3q3.jpg' %}" alt="">
+                </div>
+                <a name="sec3"></a>
+                <div class="infimg">
+                    <div class="inf">Шаг 6: расставляем углы верхнего слоя по своим местам.</div>
+                    <img src="{% static 'cuberecords/img/3z1.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">U R U' L' U R' U' L 
+Сделайте эту комбинацию, и один из кубиков обязательно станет на свое место.</div>
+                    <img src="{% static 'cuberecords/img/3z2.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Вариант 1. Три несобранные ребра перемещаются против часовой стрелки и становятся на свои места. Собранным углом держим к себе и справа, как на рисунке. 
+U R U' L' U R' U' L</div>
+                    <img src="{% static 'cuberecords/img/3z3.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Вариант 2. Три несобранные ребра перемещаются по часовой стрелке и становятся на свои места. Собранным углом держим к себе и слева, как на рисунке. 
+U' L' U R U' L U R'</div>
+                    <img src="{% static 'cuberecords/img/3z4.jpg' %}" alt="">
+                </div>
+                <a name="sec4"></a>
+                <div class="infimg">
+                    <div class="inf">Шаг 7. Разворачиваем углы правильными цветами.</div>
+                    <img src="{% static 'cuberecords/img/3ritg.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">R' D' R D 
+Начнем с Красно-Сине-Белого. Держим кубик так, чтобы этот угол смотрел на вас и был справа. Делаем "четверку" 2 или 4 раза, пока угол не развернется.</div>
+                    <img src="{% static 'cuberecords/img/3r1.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">U 
+Красно-Сине-Белый развернулся. Но кубик "разрушился" - не паникуйте, так и должно быть. Поверните верх - теперь перед вами следующий угол. Внимание!!! Сам кубик все время держим красным центром к себе, белым - вверх.</div>
+                    <img src="{% static 'cuberecords/img/3r2.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">R' D' R D 
+Перед вами следующий Бело-Сине-Оранжевый угол. Опять разворачиваем его "четверкой". Если так получилось, что следующий угол уже правильно собран, тогда просто поверните верх ЕЩЕ РАЗ и собирайте следующий угол.</div>
+                    <img src="{% static 'cuberecords/img/3r3.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Когда вы развернете все 4 угла правильными цветами, произойдет маленькое чудо - остальные элементы кубика станут на свои места!</div>
+                    <img src="{% static 'cuberecords/img/3ritg.jpg' %}" alt="" title="Готовый Кубик Рубика">
+                </div>
+                <div class="box">
+                <a class="button" href="{% url 'index' %}">На главную</a>
+                </div>
+            </div>
+{% endblock %}

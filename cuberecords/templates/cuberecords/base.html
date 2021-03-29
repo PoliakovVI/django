@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'cuberecords/css/style.css' %}">
+    <title>Кубик Рубика</title>
+</head>
+
+<body onload="startTime()">
+<div class="container">
+    <a class="gotop" href="#"><img src="{% static 'cuberecords/img/top.png' %}" alt="top"></a>
+    <div class="header">
+
+        <ul class="list">
+            <li class="allname">CubeRecords</li>
+            <li><a href="{% url 'index' %}" class="point">Главная</a></li>
+            <li><a href="{% url 'preparation' %}" class="point">Подготовка</a></li>
+
+            <li>
+                <ul class="drop">
+                    <li><a href="{% url 'stage1' %}#sec1" class="dropli">Правильный крест</a></li>
+                    <li><a href="{% url 'stage1' %}#sec2" class="dropli">Ставим углы</a></li>
+                </ul>
+
+                <a href="{% url 'stage1' %}" class="point">Этап №1</a></li>
+            <li>
+                <ul class="drop">
+                    <li><a href="{% url 'stage2' %}#sec1" class="dropli">Средний слой</a></li>
+                </ul>
+                <a href="{% url 'stage2' %}" class="point">Этап №2</a></li>
+
+            <li>
+                <ul class="drop">
+                    <li><a href="{% url 'stage3' %}#sec1" class="dropli">Новый крест</a></li>
+                    <li><a href="{% url 'stage3' %}#sec2" class="dropli">Делаем правильным</a></li>
+                    <li><a href="{% url 'stage3' %}#sec3" class="dropli">Ставим углы</a></li>
+                    <li><a href="{% url 'stage3' %}#sec4" class="dropli">Разворачиваем углы</a></li>
+                </ul>
+                <a href="{% url 'stage3' %}" class="point">Этап №3</a></li>
+            <li><a href="{% url 'records' %}" class="point">Рекорды</a></li>
+
+            <div class = "user">
+
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'logout' %}" class="linkbox2 point">Log out</a>
+                <a href="{% url 'account'  %}" class="linkbox1 point">{{ request.user.username }}</a>
+                {% else %}
+                <a href="{% url 'signup' %}" class="linkbox1 point">Sign up</a>
+                <a href="{% url 'login' %}" class="linkbox2 point">Log in</a>
+                {% endif %}
+            </div>
+        </ul>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <div class="footer">
+        <a href="https://kak-sobrat-kubik-rubika-3x3.ru" class="outlink" target="_blank">Подробное объяснение</a>
+
+        <a href="https://ru.wikipedia.org/wiki/Кубик_Рубика" class="wiki" target="_blank"><div><img src="{% static 'cuberecords/img/wiki.png' %}" alt="Wiki"></div></a>
+
+        <div class="currentime">
+            <p id="txt"> </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

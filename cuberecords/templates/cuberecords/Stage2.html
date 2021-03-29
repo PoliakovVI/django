@@ -1,0 +1,52 @@
+{% extends 'cuberecords/base.html' %}
+{% block content %}
+{% load static %}
+            <div class="sectionName">
+                <div class="name">Этап №2</div>
+                <div class="idea">Какой бы ни была ваша цель, вы сможете ее достигнуть, если только захотите потрудиться.</div>
+                <div class="author">Опра Уинфри</div>
+            </div>
+            <div class="content">
+               <a name="sec1"></a>
+                <div class="infimg">
+                    <div class="inf">Шаг 3: сборка среднего слоя кубика Рубика.</div>
+                    <img src="{% static 'cuberecords/img/2itg.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Перевернем кубик. Теперь собранная желтая грань внизу, а вверху - белый центр. Так будем держать до конца сборки.</div>
+                    <img src="{% static 'cuberecords/img/2s1.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Найдите ребро без белого цвета, к примеру, зелено-оранжевое. Покрутите грань, пока одна из наклеек не встанет к своему центру (зеленый к зеленому).</div>
+                    <img src="{% static 'cuberecords/img/2s2.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Если зеленая грань не совмещается с зеленым центром, совместите оранжевый цвет. Т.е. у нас 2 варианта.</div>
+                    <img src="{% static 'cuberecords/img/2s3.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">U' L' U L 
+U F U' F' 
+Выполните эти формулы (ребро переместится вниз и влево). </div>
+                    <img src="{% static 'cuberecords/img/2s4.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">U R U' R' 
+U' F' U F 
+Ребро прыгает вниз и вправо - на свое место. 
+Оранжевым держим к себе</div>
+                    <img src="{% static 'cuberecords/img/2s5.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Типичная ситуация - искомое ребро уже стоит на своем месте, но неправильно повернуто. Тогда делаем одну из двух предыдущих формул - и "выбиваем" ребро со своего места.</div>
+                    <img src="{% static 'cuberecords/img/2s6.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Наше ребро выскочит наверх и вы уже сможете все сделать так, чтобы поставить его на свое место правильно.</div>
+                    <img src="{% static 'cuberecords/img/2s7.jpg' %}" alt="">
+                </div>
+                <div class="box">
+                <a class="button" href="{% url 'stage3' %}">Далее</a>
+                </div>
+            </div>
+{% endblock %}

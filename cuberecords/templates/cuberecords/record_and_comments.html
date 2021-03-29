@@ -1,0 +1,42 @@
+{% extends 'cuberecords/base.html' %}
+{% block content %}
+<div class="table short_table">
+    <table>
+        <div>
+            <tr>
+                <td class="tabtxt">{{ note.text }}</td>
+                <td class="tabtime">{{ note.spent_time }}</td>
+            </tr>
+        </div>
+    </table>
+</div>
+
+{% if request.user.is_authenticated %}
+<div class="form_comment">
+    <form method="POST">
+        {% csrf_token %}
+        <table>{{ form }}</table>
+        <input type="submit" value="Sent"/>
+    </form>
+</div>
+{% endif %}
+
+<div class="space_block">
+</div>
+
+<div class="comments">
+    <ul>
+    {% for comment in comments %}
+        <li>
+            <div class="block">
+                <div class="author"> {{ comment.author }} </div><br>
+                <div class="text"> {{ comment.text }} </div><br>
+                <div class="date"> {{ comment.created_at }} </div>
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'cuberecords/base.html' %}
+{% block content %}
+{% load static %}
+            <div class="sectionName">
+                <div class="name">Этап №1</div>
+                <div class="idea">Самое страшное – это не «снова не получается». Самое страшное – это «я больше не хочу пробовать».</div>
+                <div class="author">Роберт Орбен</div>
+            </div>
+            <div class="content">
+               <a name="sec1"></a>
+                <div class="infimg">
+                    <div class="inf">Шаг 1: Нужно собрать желтый крест на верхней грани </div>
+                    <img src="{% static 'cuberecords/img/1itg.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Первый шаг - опустить ребро вниз, чтобы оно оказалось на нижней грани. В нашем случае сделать R.</div>
+                    <img src="{% static 'cuberecords/img/1s1.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Второй шаг - совместить ребро, которое теперь находится внизу, с синим центром кубика. Выполняем D'.</div>
+                    <img src="{% static 'cuberecords/img/1s2.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Третий шаг - поднять ребро на свое место. Для этого нужно сделать F2. Теперь наше ребро на своем месте, но..</div>
+                    <img src="{% static 'cuberecords/img/1s3.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Возможная ситуация: ребро расположено «наоборот», для того, чтобы развернуть его, делаем 
+F U' R U</div>
+                    <img src="{% static 'cuberecords/img/1s4.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Поворачиваем кубик следующим (красным) центром к себе и собираем Желто-Красное ребро. Все аналогично. Затем Желто-Зеленое и Желто-Оранжевое.</div>
+                    <img src="{% static 'cuberecords/img/1s5.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Вы собрали несколько ребер, а следующее стоит так, что опустив его, мы нарушим верх. Комбинация: R' D' R - это то же самое, просто с возвратом правой грани на свое место.</div>
+                    <img src="{% static 'cuberecords/img/1s6.jpg' %}" alt="">
+                </div>
+                <a name="sec2"></a>
+                <div class="infimg">
+                    <div class="inf">Шаг 2: расставить углы на верхнем слое по своим местам</div>
+                    <img src="{% static 'cuberecords/img/1pitg.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Начнем с Желто-Красно-Синего угла. Держим желтый центр вверху и ищем его. Первый вариант  наш угол находится внизу.</div>
+                    <img src="{% static 'cuberecords/img/1p1.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Начнем с Желто-Красно-Синего угла. Держим желтый центр вверху и ищем его. Первый вариант наш угол находится внизу.</div>
+                    <img src="{% static 'cuberecords/img/1p2.jpg' %}" alt="">
+                </div>
+                <div class="infimg">
+                    <div class="inf">Подкрутим низ так, чтобы искомый угол стал под своим местом, как на рис. Затем делаем R' D' R D от 1 до 5 раз, пока угол не станет на свое место правильно. Далее - следующий угол.</div>
+                    <img src="{% static 'cuberecords/img/1p3.jpg' %}" alt="">
+                </div>
+                
+                <div class="box">
+                <a class="button" href="{% url 'stage2' %}">Далее</a>
+                </div>
+            </div>
+{% endblock %}

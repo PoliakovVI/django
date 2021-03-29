@@ -1,0 +1,47 @@
+{% extends 'cuberecords/base.html' %}
+{% block content %}
+{% load static %}
+
+{% if request.user.is_authenticated %}
+
+    {% if request.user.username != 'admin' %}
+    <div class="user_menu">
+
+        <div class="form_req">
+            Make record request
+            <form method="POST">
+                {% csrf_token %}
+                <table>{{ form }}</table>
+                <input type="submit" value="Sent"/>
+            </form>
+        </div>
+
+    </div>
+    {% else %}
+        <div class="content table">
+            <table>
+                <tr>
+                    <td class="tabcap">Описание</td>
+                    <td class="tabcap">Время, сек</td>
+                    <td class="tabcap"></td>
+                    <td class="tabcap"></td>
+                </tr>
+
+                {% for req in requests %}
+                <tr>
+                    <td class="tabtxt">{{ req.text }}</td>
+                    <td class="tabtime">{{ req.spent_time }}</td>
+                    <td>
+                        <a href="{% url 'accept' req.id %}">Accept</a>
+                    </td>
+                    <td>
+                        <a href="{% url 'reject' req.id %}">Reject</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% endif %}
+{% endif %}
+
+{% endblock %}

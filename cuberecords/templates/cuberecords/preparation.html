@@ -1,0 +1,34 @@
+{% extends 'cuberecords/base.html' %}
+{% block content %}
+{% load static %}
+            <div class="sectionName">
+                <div class="name">Подготовка</div>
+                <div class="idea">Главное в ягодах — закрыть дно посудины.</div>
+                <div class="author">Виктор Астафьев</div>
+            </div>
+            
+            <div class="content prep">
+              <div class="infimg">
+                  <div class="inf">L - поворот левой грани на 90 по часовой стрелке. 
+                  R - поворот правой грани.</div>
+                  <img src="{% static 'cuberecords/img/prep1.jpg' %}" alt="">
+
+              </div>
+              <div class="infimg">
+                  <div class="inf">U - поворот верхней грани на 90 по часовой стрелке. 
+D - поворот нижней грани.</div>
+                  <img src="{% static 'cuberecords/img/prep2.jpg' %}" alt="">
+              </div>
+              <div class="infimg">
+                  <div class="inf">F - поворот фронтальной грани на 90 по часовой стрелке.</div>
+                  <img src="{% static 'cuberecords/img/prep3.jpg' %}" alt="">
+              </div>
+              <div class="infimg">
+                  <div class="inf">' - штрих обозначает, что поворот направлен против часовой стрелки.</div>
+                  <img src="{% static 'cuberecords/img/prep4.jpg' %}" alt="">
+              </div>
+               <div class="box">
+                <a class="button" href="{% url 'stage1' %}">Далее</a>
+                </div>
+            </div>
+{% endblock %}

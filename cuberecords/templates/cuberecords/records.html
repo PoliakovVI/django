@@ -1,0 +1,19 @@
+{% extends 'cuberecords/base.html' %}
+{% block content %}
+<div class=" content table">
+    <table>
+        <tr>
+            <td class="tabcap">Описание</td>
+            <td class="tabcap">Время, сек</td>
+        </tr>
+        {% for note in notes %}
+        <div>
+            <tr>
+                <td class="tabtxt"><a href="{% url 'record' note.id %}">{{ note.text }}</a></td>
+                <td class="tabtime">{{ note.spent_time }}</td>
+            </tr>
+        </div>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
